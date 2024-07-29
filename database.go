@@ -79,7 +79,7 @@ type Release struct {
 	Tracklist         []Track        `json:"tracklist"`
 	URI               string         `json:"uri"`
 	Videos            []Video        `json:"videos"`
-	Year              int            `json:"year"`
+	Year              *int           `json:"year"`
 }
 
 func (s *databaseService) Release(releaseID int) (*Release, error) {
